@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="mainBody">
+      <header>
+        <!-- Payment Form heading -->
+        <h2>Payment Form</h2>
+
+        <!-- Required fields notice -->
+        <p style="color: rgb(171, 169, 167)">
+          Required fields are marked with an asterisk (*)
+        </p>
+      </header>
+
+      <section>
+        <form action="">
+          <section>
+            <!-- 
+                        -Created a form input field for the user's name
+                        Uses the "label" element to provide a label for the input field
+                        The label is "Name:*" and the asterisk indicates that the field is required
+                        The "for" attribute of the label matches the "id" attribute of the input field to link them together
+                        The input field is of type "text", allowing the user to enter any text they want
+                        The "name" attribute of the input field is used to identify it in the form data when submitted to the server
+                        If the value of the "for" attribute in the label element and the value of the "id" attribute in the input field do not match, the label will not be associated with the input field. This means that clicking on the label will not set focus on the input field, 
+                        and screen readers and other accessibility tools may not be able to correctly identify the purpose of the input field.
+                    -->
+
+            <!-- Gender radio buttons -->
+
+            <!-- Name field -->
+            <div class="twoside">
+              <label for="fullname" class="nam">Name:*</label>
+              <input
+                type="text"
+                name="name"
+                id="fullname"
+                required
+                class="box"
+                placeholder="Full name"
+              />
+            </div>
+
+            <!-- Gender radio buttons -->
+            <div class="twoside">
+              <legend class="nam">
+                Gender:<span aria-hidden="true">*</span>
+              </legend>
+
+              <fieldset class="boxe">
+                <label for="male"
+                  >Male
+                  <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="male"
+                    required
+                /></label>
+                <label for="female"
+                  >Female
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                    required
+                /></label>
+                <label for="other"
+                  >Other
+                  <input
+                    type="radio"
+                    id="other"
+                    name="gender"
+                    value="other"
+                    required
+                /></label>
+              </fieldset>
+            </div>
+
+            <!-- Address textarea field -->
+            <div class="twoside">
+              <label for="address" class="nam">Address:</label>
+              <textarea
+                id="address"
+                name="address"
+                cols="30"
+                rows="10"
+                class="box"
+                placeholder="Resent address"
+              ></textarea>
+            </div>
+
+            <!-- Email input field -->
+            <div class="twoside">
+              <label for="email" class="nam"
+                >Email:<span aria-hidden="true">*</span></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="box"
+                placeholder="Your email"
+              />
+            </div>
+
+            <div class="twoside">
+              <!-- Pincode input field -->
+              <label for="pincode" class="nam"
+                >Pincode:<span aria-hidden="true">*</span></label
+              >
+              <input
+                type="number"
+                id="pincode"
+                name="pincode"
+                required
+                class="box"
+                placeholder="Enter pin code"
+              />
+            </div>
+
+            <div class="twoside">
+              <label for="card-type" class="nam"
+                >Card Type:<span aria-hidden="true">*</span></label
+              >
+              <select id="card-type" name="cardtype" required class="box">
+                <option value="">-- Select your card --</option>
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="amex">American Express</option>
+                <option value="discover">Discover</option>
+              </select>
+            </div>
+
+            <div class="twoside">
+              <!-- Card number input field -->
+              <label for="card-number" class="nam"
+                >Card Number:<span aria-hidden="true">*</span></label
+              >
+              <input
+                type="number"
+                id="card-number"
+                name="cardNumber"
+                required
+                class="box"
+                placeholder="Valid card number"
+              />
+            </div>
+
+            <div class="twoside">
+              <label for="expiration-date" class="nam">Exp Date:*</label>
+              <input
+                type="date"
+                id="expiration-date"
+                name="expirationDate"
+                required
+                class="box"
+              />
+            </div>
+
+            <div class="twoside">
+              <label for="cvv-number" class="nam"
+                >CVV:<span aria-hidden="true">*</span></label
+              >
+              <input
+                type="number"
+                id="cvv-number"
+                required
+                class="box"
+                placeholder="card cvv number"
+              />
+            </div>
+          </section>
+
+          <div class="boxx">
+            <button type="submit" class="sub">Pay Now</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
